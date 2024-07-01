@@ -1,0 +1,17 @@
+{
+  "name": "gtran",
+  "version": "1.0.0",
+  "main": "gtran.js",
+  "bin": "gtran.js",
+  "scripts": {
+    "start": "node gtran.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@iamtraction/google-translate": "^2.0.1",
+    "commander": "^8.0.0"
+  }
+}
