@@ -13,5 +13,18 @@
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
     "commander": "^8.0.0"
+  },
+  "pkg": {
+    "targets": [
+      "node18-linux-x64",
+      "node18-macos-x64",
+      "node18-win-x64"
+    ],
+    "outputPath": "./dist",
+    "assets": [
+      "gtran.js"
+    ],
+    "description": "Google Translate Command Line Tool",
+    "productName": "GTranslateCLI"
   }
 }
