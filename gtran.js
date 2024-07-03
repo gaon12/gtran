@@ -11,15 +11,24 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
+const targetLanguage = options.target || 'en';
 
-translate(options.text, { from: options.source, to: options.target })
+translate(options.text, { from: options.source, to: targetLanguage })
   .then(res => {
-    console.log(`Translation: ${res.text}`);
-    console.log(`Source Language: ${res.from.language.iso}`);
+    let translationResult = {
+      source: res.from.language.iso,
+      target: targetLanguage,
+      translation: res.text
+    };
+
     if (res.from.text.autoCorrected || res.from.text.didYouMean) {
-      console.log(`Did you mean: ${res.from.text.value}`);
+      // Remove <em> tags from the did_you_mean text
+      const cleanText = res.from.text.value.replace(/<\/?em>/g, '');
+      translationResult.did_you_mean = cleanText;
     }
+
+    console.log(JSON.stringify(translationResult));
   })
   .catch(err => {
-    console.error('Error:', err);
+    console.error(JSON.stringify({ err: err.toString() }));
   });

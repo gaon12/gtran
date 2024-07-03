@@ -1,6 +1,6 @@
 {
   "name": "gtran",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "gtran.js",
   "bin": "gtran.js",
   "scripts": {
@@ -8,8 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "Google Translate Command Line Tool",
+  "productName": "GTranslateCLI",
   "dependencies": {
     "@iamtraction/google-translate": "^2.0.1",
     "commander": "^8.0.0"
@@ -17,14 +18,15 @@
   "pkg": {
     "targets": [
       "node18-linux-x64",
+      "node18-linux-arm64",
       "node18-macos-x64",
-      "node18-win-x64"
+      "node18-macos-arm64",
+      "node18-win-x64",
+      "node18-win-arm64"
     ],
     "outputPath": "./dist",
     "assets": [
       "gtran.js"
-    ],
-    "description": "Google Translate Command Line Tool",
-    "productName": "GTranslateCLI"
+    ]
   }
 }
