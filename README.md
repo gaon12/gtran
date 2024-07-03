@@ -3,16 +3,25 @@ Google translate in CLI! 구글 번역을 터미널에서 실행해 보세요!
 
 # 사용법
 ```bash
-gtran-{os명} --source {원문 언어값} --target {번역할 언어값} --text {번역할 텍스트}
+gtran-{os명}-{아키텍처 종류} --source {원문 언어값} --target {번역할 언어값} --text {번역할 텍스트}
 
-# 예: 윈도우
-gtran-win.exe --text "Tu es incroyable!" --source "fr" --target "en"
+# 예: 윈도우(x64)
+gtran-win-x64.exe --text "Tu es incroyable!" --source "fr" --target "en"
 
-# 예: 리눅스
-./gtran-linux --text "Tu es incroyable!" --source "fr" --target "en"
+# 예: 윈도우(arm64)
+gtran-win-arm64.exe --text "Tu es incroyable!" --source "fr" --target "en"
 
-# 예: 맥os
-./gtran-macos --text "Tu es incroyable!" --source "fr" --target "en"
+# 예: 리눅스(x64)
+./gtran-linux-x64 --text "Tu es incroyable!" --source "fr" --target "en"
+
+# 예: 리눅스(arm64)
+./gtran-linux-arm64 --text "Tu es incroyable!" --source "fr" --target "en"
+
+# 예: 맥os(x64)
+./gtran-macos-x64 --text "Tu es incroyable!" --source "fr" --target "en"
+
+# 예: 맥os(arm64)
+./gtran-macos-arm64 --text "Tu es incroyable!" --source "fr" --target "en"
 ```
 
 * `source` 파라미터 생략 시 `auto`(자동 인식)으로 간주, `target` 파라미터 생략 시, `en`으로 간주
